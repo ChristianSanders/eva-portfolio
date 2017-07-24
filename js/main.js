@@ -64,6 +64,10 @@ $(document).ready(function(){
           self.wrap.addClass('mfp-image-loaded');
         }, 16);
       }
+      
+    },
+    image: {
+        titleSrc: 'title'
     }
   });
 
@@ -77,4 +81,53 @@ $(document).ready(function(){
     var text = $(this).val();
     (text === "") ? $(this).removeClass('has-value') : $(this).addClass('has-value');
   })
+
+  // show more work
+  $('.more-btn').on('click', function(){
+    $('.front-page').addClass('show-search-page');
+    $('.search-page').addClass('show-search-page');
+    $('nav').addClass('show-search-page');
+    $('body').addClass('show-search-page');
+  });
+  $('.back-btn').on('click', function(){
+    $('.front-page').removeClass('show-search-page');
+    $('.search-page').removeClass('show-search-page');
+    $('nav').removeClass('show-search-page');
+    $('body').removeClass('show-search-page');
+  });
+
+  // input filter search page
+  // $(".search-box").on('keyup', function() {
+  //   var searchBox = $(".search-box");
+  //   var galleryItems = $(".search-page .img-grid li");
+  //   // console.log(galleryItems);
+  //   // // check if the value of the input box correspond to an item
+  //   galleryItems.each(function(index) {
+  //     if ($(this).children().attr("href").toUpperCase().indexOf(searchBox.val().toUpperCase()) !== -1) {
+  //       $(this).css("display", "");
+  //     } else {
+  //       $(this).css("display", "none");
+  //     }
+  //   });
+  // });
+
+  
+  $('.categories li').first().addClass('active');
+  // category chooser
+  $('.categories li').on('click', function() {
+    // get the filter
+    var category = $(this).text();
+
+    $('.categories li.active').removeClass('active');
+    $(this).addClass('active');
+
+    if (category === "Alles") {
+      $('.search-page .img-grid li').css("display", "");
+    } else {
+      $('.search-page .img-grid li').css("display", "none");
+      $('.search-page .img-grid li.' + category).css("display", "");
+    }
+
+  });
+
 });
