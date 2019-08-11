@@ -363,6 +363,15 @@ body.show-search-page {
 button:focus {
   outline: 0; }
 
+.rotate90 {
+  transform: rotate(90deg); }
+
+.rotate180 {
+  transform: rotate(180deg); }
+
+.rotate270 {
+  transform: rotate(270deg); }
+
 #hero {
   margin-top: 50px;
   height: 80vh; }
