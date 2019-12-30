@@ -131,15 +131,15 @@ $(document).ready(function(){
   });
 
   var images = $("img");
-  images.forEach(image => {
-      image.getData(newimg, function() {
+  images.each((index, image) => {
+      EXIF.getData(image, function() {
         var orientation = EXIF.getTag(this, "Orientation");
         if(orientation == 6) {
-            newimg.className = "camview rotate90";
+          image.className = "camview rotate90";
         } else if(orientation == 8) {
-            newimg.className = "camview rotate270";
+          image.className = "camview rotate270";
         } else if(orientation == 3) {
-            newimg.className = "camview rotate180";
+          image.className = "camview rotate180";
         }
     });
   });

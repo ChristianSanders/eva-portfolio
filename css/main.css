@@ -89,6 +89,19 @@ nav {
         top: 0;
         bottom: 0;
         margin: auto; }
+      .img-grid ul li span {
+        padding: 0 8px;
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+        background-color: rgba(54, 54, 54, 0.4);
+        width: calc(100% - 16px);
+        line-height: 1.5em;
+        text-align: center;
+        color: #e4e4e4;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; }
 
 .more-btn {
   width: 140px;
@@ -150,7 +163,7 @@ nav {
       #about-me .quote-box .quote:before, #about-me .quote-box .quote:after {
         display: block;
         position: absolute;
-        background: lightgreen;
+        background: #46a494;
         width: 100px;
         height: 4px;
         left: 50%;
@@ -165,18 +178,21 @@ nav {
     #about-me .btn-story .story {
       background: white;
       padding: 20px;
-      box-shadow: black 0 7px 30px -10px;
+      box-shadow: black 0 5px 30px -15px;
       color: white;
-      background: #5cccb8;
+      background: #46a494;
       margin: 0 auto;
       margin-top: 30px;
       max-width: 45em; }
 
 #expos {
   padding: 30px 0;
-  background: linear-gradient(#6cb663, #46a494); }
+  background: #46a494; }
   #expos h2 {
     color: white; }
+  #expos h3 {
+    color: white;
+    text-align: center; }
   #expos ul {
     list-style-type: none;
     margin: 0;
@@ -213,8 +229,9 @@ nav {
           width: 100%;
           text-align: center; }
       #expos ul .event .event-info {
+        color: black;
         padding: 0 10px;
-        background: #84fb7c;
+        background: antiquewhite;
         width: calc(100% - 160px);
         float: left;
         height: 100%;
@@ -230,6 +247,9 @@ nav {
   position: relative;
   padding: 30px 0;
   overflow: auto; }
+  #contact iframe {
+    display: block;
+    margin: 0 auto; }
   #contact form {
     max-width: 30em;
     margin: 0 auto;
@@ -303,7 +323,7 @@ nav {
       list-style-type: none; }
       .search-page .categories ul li {
         display: inline-block;
-        background: #48bb3b;
+        background: #689663;
         border-radius: 20px;
         padding: 5px 15px;
         margin: 5px;
@@ -316,7 +336,7 @@ nav {
         user-select: none;
         transition: background .3s ease-in-out; }
         .search-page .categories ul li.active {
-          background: #b0e4ab; }
+          background: #a2c09f; }
   .search-page .back-btn {
     color: white;
     width: 50px;
