@@ -28,6 +28,33 @@ nav.show-search-page {
   width: 75%;
   margin: 0 auto; }
 
+.expo {
+  display: grid;
+  width: 100%;
+  background: antiquewhite;
+  max-width: 35rem;
+  margin: 0 auto;
+  grid-template-columns: auto 1fr;
+  border-radius: 6px;
+  overflow: hidden;
+
+  .expo__date {
+    font-size: 1rem;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 16px;
+  }
+
+  .expo__location {
+    padding: 16px;
+    background: antiquewhite;
+    display: flex;
+    align-items: center;
+  }
+}
+
 nav {
   top: 0;
   z-index: 1000;
